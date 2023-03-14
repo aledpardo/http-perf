@@ -9,4 +9,14 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('/fetch')
+  getFetch(): Promise<any> {
+    return this.appService.getFetch();
+  }
+
+  @Get('/keep-alive')
+  getKeepAlive(): Promise<any> {
+    return this.appService.getKeepAlive();
+  }
 }
